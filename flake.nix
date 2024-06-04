@@ -49,6 +49,7 @@
         packages.default = drv;
         devShell = pkgs.mkShell {
           inputsFrom = [drv];
+          packages = [pkgs.bashInteractive];
           shellHook = ''echo "with love from wrd :)"'';
         };
       }
